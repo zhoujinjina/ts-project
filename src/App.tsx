@@ -1,13 +1,14 @@
-import { useState } from "react";
+import { FC, useState } from "react";
 import "./App.css";
 
-function App() {
+const App: FC = () => {
   const [count, setCount] = useState(0);
-  const addCount = (a:string):never => {
+  const add = (): void => {
     setCount(count + 1);
-    throw new Error
   };
-  return <></>;
-}
+  return <>{count}
+  <button onClick={add}>点击</button>
+  </>;
+};
 
 export default App;
